@@ -1,0 +1,114 @@
+{
+  "plugin_id": "silo.discord",
+  "version": "0.1.0",
+  "checksum": "__CHECKSUM__",
+  "silo_api_version": "v1",
+  "supported_platforms": [
+    {
+      "os": "darwin",
+      "arch": "arm64"
+    },
+    {
+      "os": "linux",
+      "arch": "amd64"
+    },
+    {
+      "os": "linux",
+      "arch": "arm64"
+    }
+  ],
+  "capabilities": [
+    {
+      "type": "auth_provider.v1",
+      "id": "discord",
+      "display_name": "Discord",
+      "description": "Sign in users with Discord OAuth2.",
+      "auth_modes": [
+        "oauth2"
+      ],
+      "icon_url": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg",
+      "metadata": {
+        "display_name": "Discord",
+        "auth_modes": [
+          "oauth2"
+        ],
+        "icon_url": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg"
+      }
+    }
+  ],
+  "global_config_schema": [
+    {
+      "key": "discord_client_id",
+      "title": "Discord Client ID",
+      "description": "OAuth2 client ID from your Discord application.",
+      "required": true,
+      "json_schema": "{\"type\":\"object\",\"additionalProperties\":false,\"properties\":{\"value\":{\"type\":\"string\",\"minLength\":1}},\"required\":[\"value\"]}",
+      "admin_form": {
+        "fields": [
+          {
+            "key": "value",
+            "label": "Client ID",
+            "control": "ADMIN_FORM_CONTROL_TEXT",
+            "required": true
+          }
+        ],
+        "submit_label": "Save"
+      }
+    },
+    {
+      "key": "discord_client_secret",
+      "title": "Discord Client Secret",
+      "description": "OAuth2 client secret from your Discord application.",
+      "required": true,
+      "json_schema": "{\"type\":\"object\",\"additionalProperties\":false,\"properties\":{\"value\":{\"type\":\"string\",\"minLength\":1}},\"required\":[\"value\"]}",
+      "admin_form": {
+        "fields": [
+          {
+            "key": "value",
+            "label": "Client Secret",
+            "control": "ADMIN_FORM_CONTROL_PASSWORD",
+            "required": true,
+            "secret": true
+          }
+        ],
+        "submit_label": "Save"
+      }
+    },
+    {
+      "key": "discord_scopes",
+      "title": "Discord Scopes",
+      "description": "Space-separated scopes to request (default: identify email).",
+      "required": false,
+      "json_schema": "{\"type\":\"object\",\"additionalProperties\":false,\"properties\":{\"value\":{\"type\":\"string\"}}}",
+      "admin_form": {
+        "fields": [
+          {
+            "key": "value",
+            "label": "Scopes",
+            "control": "ADMIN_FORM_CONTROL_TEXT",
+            "placeholder": "identify email"
+          }
+        ],
+        "submit_label": "Save"
+      }
+    },
+    {
+      "key": "discord_base_url",
+      "title": "Discord Base URL",
+      "description": "Override Discord API base URL (default: https://discord.com).",
+      "required": false,
+      "json_schema": "{\"type\":\"object\",\"additionalProperties\":false,\"properties\":{\"value\":{\"type\":\"string\",\"format\":\"uri\"}}}",
+      "admin_form": {
+        "fields": [
+          {
+            "key": "value",
+            "label": "Base URL",
+            "control": "ADMIN_FORM_CONTROL_TEXT",
+            "placeholder": "https://discord.com"
+          }
+        ],
+        "submit_label": "Save"
+      }
+    }
+  ]
+}

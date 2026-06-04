@@ -1,4 +1,4 @@
-# silo.discord
+# silo-plugin-discord
 
 > **WIP:** This plugin is currently a work in progress. Official builds/releases are planned for a future update.
 
@@ -43,7 +43,7 @@ The plugin binary is produced as:
 
 ### 1) Install and enable the plugin
 
-Install `silo.discord` from your configured plugin repository, then enable the installation in Silo admin.
+Install `silo-plugin-discord` from your configured plugin repository, then enable the installation in Silo admin.
 
 ### 2) Find installation ID
 
@@ -102,23 +102,6 @@ curl -i -X POST http://<silo-host>/api/v1/auth/oauth/<installation_id>/init
 - **Cause:** Callback in Discord app does not exactly match Silo callback URL (scheme/host/path/port mismatch).
 - **Fix:** Ensure both sides match exactly:
   `https://<your-public-silo-url>/api/v1/auth/oauth/<installation_id>/callback`
-
-### Provider appears in `/api/v1/auth/providers` but no Discord button on login page
-
-- **Cause:** Known upstream frontend issue.
-- **Reference:** <https://github.com/Silo-Server/silo-server/issues/31>
-
-### First-time OAuth login fails with bcrypt password length error
-
-- **Cause:** Known upstream auto-provision issue.
-- **Reference:** <https://github.com/Silo-Server/silo-server/issues/30>
-
-## Known upstream issues
-
-- Issue #30: <https://github.com/Silo-Server/silo-server/issues/30>
-- Issue #31: <https://github.com/Silo-Server/silo-server/issues/31>
-
-These issues are in Silo server behavior, not in this plugin implementation.
 
 ## Security note
 

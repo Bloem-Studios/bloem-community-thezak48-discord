@@ -1,7 +1,5 @@
 # silo-plugin-discord
 
-> **WIP:** This plugin is currently a work in progress. Official builds/releases are planned for a future update.
-
 Discord OAuth2 auth provider plugin for [Silo Server](https://github.com/Silo-Server/silo-server).
 
 ## What it provides

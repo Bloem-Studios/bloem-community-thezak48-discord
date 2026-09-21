@@ -110,5 +110,15 @@
         "submit_label": "Save"
       }
     }
-  ]
+  ],
+  "presentation": {
+    "display_name": "Discord",
+    "publisher_name": "thezak48",
+    "publisher_url": "https://github.com/thezak48",
+    "homepage_url": "https://github.com/thezak48/silo-plugin-discord",
+    "source_url": "https://github.com/Bloem-Studios/bloem-community-thezak48-discord",
+    "support_url": "https://github.com/Bloem-Studios/bloem-community-thezak48-discord/issues",
+    "changelog_url": "https://github.com/Bloem-Studios/bloem-community-thezak48-discord/releases",
+    "description_markdown": "\n\nCommunity plugin by thezak48 (https://github.com/thezak48/silo-plugin-discord), built for Bloem on the Bloem plugin SDK."
+  }
 }

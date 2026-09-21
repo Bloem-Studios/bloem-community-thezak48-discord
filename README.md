@@ -1,3 +1,12 @@
+## Bloem community build
+
+This is Bloem's community build of [thezak48/silo-plugin-discord](https://github.com/thezak48/silo-plugin-discord) by **thezak48**
+(contributors: thezak48). It is ported to the Bloem plugin SDK and listed in the
+Bloem community plugin catalog. All credit for the plugin goes to its author; please
+report plugin behavior issues upstream. See [NOTICE](NOTICE) for provenance.
+
+---
+
 # silo-plugin-discord
 
 Discord OAuth2 auth provider plugin for [Silo Server](https://github.com/Silo-Server/silo-server).
